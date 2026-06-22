@@ -1,173 +1,346 @@
-import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import heroImage from "../assets/hero.jpg";
-import popupImage from "../assets/Popup.jpg";
+import React from "react";
+import {
+  Rocket,
+  CalendarDays,
+  Zap,
+  Target,
+  Leaf,
+} from "lucide-react";
 
 const Hero: React.FC = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const navigate = useNavigate();
+  return (
+    <section className="relative flex min-h-screen items-center overflow-hidden bg-[#040816] text-white">
 
-  const goToMenu = (orderType?: "delivery" | "pickup") => {
-    setIsModalOpen(false);
+      {/* =======================================================
+          BACKGROUND
+      ======================================================= */}
 
-    if (orderType) {
-      navigate("/menu", {
-        state: { orderType },
-      });
-    } else {
-      navigate("/menu");
-    }
-  };
+      {/* Base gradient */}
+      <div className="absolute inset-0 bg-gradient-to-b from-[#040816] via-[#08122B] to-[#040816]" />
+
+      {/* Top center purple glow */}
+      <div
+        className="absolute left-1/2 top-0 h-[600px] w-[900px] -translate-x-1/2"
+        style={{
+          background:
+            "radial-gradient(circle, rgba(168,85,247,.18) 0%, rgba(168,85,247,.10) 30%, transparent 70%)",
+          filter: "blur(80px)",
+        }}
+      />
+
+      {/* Left blue glow */}
+      <div
+        className="absolute -left-48 bottom-8 h-[700px] w-[700px]"
+        style={{
+          background:
+            "radial-gradient(circle, rgba(59,130,246,.30) 0%, rgba(59,130,246,.12) 40%, transparent 72%)",
+          filter: "blur(90px)",
+        }}
+      />
+
+      {/* Right purple glow */}
+      <div
+        className="absolute -right-48 bottom-0 h-[700px] w-[700px]"
+        style={{
+          background:
+            "radial-gradient(circle, rgba(168,85,247,.30) 0%, rgba(168,85,247,.12) 40%, transparent 72%)",
+          filter: "blur(90px)",
+        }}
+      />
+
+      {/* Middle soft blue glow */}
+      <div
+        className="absolute left-1/2 top-[34%] h-[420px] w-[900px] -translate-x-1/2"
+        style={{
+          background:
+            "radial-gradient(circle, rgba(59,130,246,.10), transparent 70%)",
+          filter: "blur(80px)",
+        }}
+      />
+
+      {/* Small accent glows */}
+      <div className="absolute left-[18%] top-[22%] h-36 w-36 rounded-full bg-cyan-400/10 blur-[90px]" />
+      <div className="absolute right-[22%] top-[30%] h-44 w-44 rounded-full bg-fuchsia-500/10 blur-[90px]" />
+
+      {/* =======================================================
+          GRID FLOOR
+      ======================================================= */}
+
+      <div className="absolute inset-x-0 bottom-0 h-[220px] overflow-hidden opacity-70">
+
+        {/* Fade into floor */}
+        <div className="absolute inset-0 bg-gradient-to-t from-[#040816] via-transparent to-transparent z-10" />
+
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage: `
+              linear-gradient(rgba(74,144,226,.16) 1px, transparent 1px),
+              linear-gradient(90deg, rgba(74,144,226,.16) 1px, transparent 1px)
+            `,
+            backgroundSize: "70px 70px",
+            transform:
+              "perspective(900px) rotateX(78deg) scale(2.3)",
+            transformOrigin: "bottom",
+            maskImage:
+              "linear-gradient(to top, black 35%, transparent 100%)",
+            WebkitMaskImage:
+              "linear-gradient(to top, black 35%, transparent 100%)",
+          }}
+        />
+      </div>
+
+      {/* =======================================================
+          CONTENT CONTAINER
+      ======================================================= */}
+
+      <div className="relative z-20 mx-auto flex w-full max-w-7xl flex-col items-center px-6 py-8 text-center lg:px-8">
+
+        {/* Badge */}
+
+        <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-blue-400/20 bg-white/[0.04] px-5 py-2 text-sm font-medium text-slate-200 backdrop-blur-xl shadow-[0_0_35px_rgba(59,130,246,.15)]">
+
+          <span className="text-fuchsia-400">
+            ✦
+          </span>
+
+          AI-Powered Planning for Modern Teams
+
+        </div>
+
+        {/* =======================================================
+            HERO TITLE
+        ======================================================= */}
+
+        <h1 className="max-w-6xl font-black leading-[0.92] tracking-[-0.05em]">
+
+          {/* First line */}
+
+          <span
+            className="block text-[3.8rem] sm:text-[5rem] lg:text-[7rem]"
+            style={{
+              textShadow:
+                "0 0 20px rgba(255,255,255,.10)",
+            }}
+          >
+            Smarter{" "}
+
+            <span
+              className="bg-gradient-to-r from-white via-white to-fuchsia-300 bg-clip-text text-transparent"
+              style={{
+                filter:
+                  "drop-shadow(0 0 10px rgba(168,85,247,.35))",
+              }}
+            >
+              Planning
+            </span>
+
+          </span>
+
+          {/* Second line */}
+
+          <span className="block text-[3.8rem] sm:text-[5rem] lg:text-[7rem]">
+
+            <span className="bg-gradient-to-r from-sky-300 via-sky-400 to-cyan-300 bg-clip-text text-transparent">
+              Starts
+            </span>
+
+            {" "}
+
+            <span
+              className="bg-gradient-to-r from-violet-300 via-fuchsia-400 to-pink-300 bg-clip-text text-transparent"
+              style={{
+                filter:
+                  "drop-shadow(0 0 16px rgba(192,132,252,.45))",
+              }}
+            >
+              Today
+            </span>
+
+          </span>
+
+        </h1>
+                {/* =======================================================
+            SUBTITLE
+        ======================================================= */}
+
+<p className="mt-5 max-w-3xl text-lg leading-relaxed text-slate-300 sm:text-xl lg:text-[1.65rem]">
+          Join modern startup teams using AI
+          <br className="hidden sm:block" />
+          to execute{" "}
+          <span className="bg-gradient-to-r from-cyan-300 to-blue-400 bg-clip-text font-semibold text-transparent">
+            faster
+          </span>{" "}
+          and{" "}
+          <span className="bg-gradient-to-r from-fuchsia-400 to-violet-300 bg-clip-text font-semibold text-transparent">
+            stress less
+          </span>
+          .
+        </p>
+
+        {/* =======================================================
+            FEATURES
+        ======================================================= */}
+
+        <div className="mt-10 grid w-full max-w-5xl gap-8 md:grid-cols-3">
+
+          <Feature
+            icon={<Zap size={20} />}
+            title="Execute Faster"
+            description="Turn plans into action in minutes, not days."
+            color="blue"
+          />
+
+          <Feature
+            icon={<Target size={20} />}
+            title="Smarter Decisions"
+            description="AI insights help you prioritize what truly matters."
+            color="purple"
+          />
+
+          <Feature
+            icon={<Leaf size={20} />}
+            title="Less Stress"
+            description="Automate busywork and focus on growth."
+            color="blue"
+          />
+
+        </div>
+
+        {/* =======================================================
+            CTA BUTTONS
+        ======================================================= */}
+
+        <div className="mt-10 flex w-full max-w-3xl flex-col justify-center gap-5 sm:flex-row">
+
+          {/* Primary */}
+
+          <button className="group relative flex-1 overflow-hidden rounded-full border border-cyan-400/30 bg-gradient-to-r from-sky-500 via-blue-500 to-violet-600 px-8 py-5 shadow-[0_0_35px_rgba(59,130,246,.35)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_50px_rgba(99,102,241,.55)]">
+
+            {/* Glass highlight */}
+
+            <div className="absolute inset-0 bg-gradient-to-b from-white/20 via-transparent to-transparent opacity-80" />
+
+            {/* Hover glow */}
+
+            <div className="absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+              <div className="absolute inset-0 bg-white/10 blur-xl" />
+            </div>
+
+            <div className="relative flex items-center justify-center gap-4">
+
+              <div className="flex h-11 w-11 items-center justify-center rounded-full bg-white/15 backdrop-blur-md">
+
+                <Rocket size={20} />
+
+              </div>
+
+              <div className="text-left">
+
+                <div className="text-lg font-semibold">
+                  Start Free Trial
+                </div>
+
+                <div className="text-sm text-blue-100">
+                  No credit card required
+                </div>
+
+              </div>
+
+            </div>
+
+          </button>
+
+          {/* Secondary */}
+
+          <button className="group relative flex-1 overflow-hidden rounded-full border border-white/10 bg-white/[0.04] px-8 py-5 backdrop-blur-xl transition-all duration-300 hover:-translate-y-1 hover:border-violet-400/40 hover:bg-white/[0.06] hover:shadow-[0_0_40px_rgba(168,85,247,.18)]">
+
+            <div className="absolute inset-0 bg-gradient-to-b from-white/10 to-transparent" />
+
+            <div className="relative flex items-center justify-center gap-4">
+
+              <div className="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/5">
+
+                <CalendarDays size={20} />
+
+              </div>
+
+              <div className="text-left">
+
+                <div className="text-lg font-semibold">
+                  Book a Demo
+                </div>
+
+                <div className="text-sm text-slate-400">
+                  See it in action
+                </div>
+
+              </div>
+
+            </div>
+
+          </button>
+
+        </div>
+
+      </div>
+      </section>
+  );
+};
+      type FeatureProps = {
+  icon: React.ReactNode;
+  title: string;
+  description: string;
+  color: "blue" | "purple";
+};
+
+const Feature: React.FC<FeatureProps> = ({
+  icon,
+  title,
+  description,
+  color,
+}) => {
+  const accent =
+    color === "blue"
+      ? {
+          border: "border-cyan-400/30",
+          bg: "bg-cyan-400/10",
+          text: "text-cyan-300",
+          glow: "shadow-[0_0_20px_rgba(34,211,238,.18)]",
+        }
+      : {
+          border: "border-fuchsia-400/30",
+          bg: "bg-fuchsia-400/10",
+          text: "text-fuchsia-300",
+          glow: "shadow-[0_0_20px_rgba(217,70,239,.18)]",
+        };
 
   return (
-    <>
-      {/* HERO SECTION */}
-      <section className="w-full bg-white">
-        <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
-            {/* LEFT: TEXT */}
-            <div>
-              <h1 className="text-4xl font-bold text-gray-900 sm:text-5xl">
-              Meeny’s Kitchen & Grill
-              </h1>
+    <div className="flex items-start gap-4 text-left">
 
-              <p className="mt-4 max-w-xl text-lg text-gray-600">
-              Introducing Meeny’s — where authenticity meets flavour! 🍲
-              A true Blasian fusion of Caribbean spice and Asian soul, crafted with love and passion.
-              Follow us on our journey as we bring the taste of home-cooked goodness to your plate.
-              </p>
+      {/* Icon */}
 
-              <button
-               onClick={() => setIsModalOpen(true)}
-                className="group mt-8 inline-flex items-center justify-center gap-3 rounded-md bg-green-600 px-8 py-3 text-base font-semibold text-white transition-colors hover:bg-green-700"
-              >
-              <span>Order Now</span>
-              <svg
-                className="h-5 w-5 transition-transform duration-200 group-hover:translate-x-1"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-              <path d="M5 12h14" />
-              <path d="M13 5l7 7-7 7" />
-              </svg>
-              </button>
+      <div
+        className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-full border backdrop-blur-xl ${accent.border} ${accent.bg} ${accent.text} ${accent.glow}`}
+      >
+        {icon}
+      </div>
 
-            </div>
+      {/* Text */}
 
-            {/* RIGHT: IMAGE */}
-            <div className="flex justify-center lg:justify-end">
-              <img
-                src={heroImage}
-                alt="Featured food"
-                className="w-full max-w-lg rounded-lg object-cover"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
+      <div>
 
-      {/* MODAL OVERLAY */}
-      {isModalOpen && (
-        <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/60"
-          onClick={() => setIsModalOpen(false)}
-        >
-          {/* MODAL CONTENT */}
-          <div
-            className="relative w-full max-w-md rounded-lg bg-white shadow-lg"
-            onClick={(e) => e.stopPropagation()}
-          >
-            {/* CLOSE BUTTON */}
-            <button
-              onClick={() => setIsModalOpen(false)}
-              className="absolute right-3 top-3 z-10 flex h-8 w-8 items-center justify-center rounded-full bg-white/80 text-gray-700 hover:bg-white"
-              aria-label="Close"
-            >
-              ✕
-            </button>
+        <h3 className="text-lg font-semibold text-white">
+          {title}
+        </h3>
 
-            {/* MODAL IMAGE */}
-            <img
-              src={popupImage}
-              alt="Order options"
-              className="h-48 w-full rounded-t-lg object-cover"
-            />
+        <p className="mt-1 max-w-xs text-sm leading-7 text-slate-400">
+          {description}
+        </p>
 
-            {/* MODAL CONTENT */}
-            <div className="p-6 text-center">
-              <h2 className="text-2xl font-bold text-gray-900">
-                Click + Collect
-                <br />
-                Takeaway + Pickup
-              </h2>
+      </div>
 
-              <div className="mt-6 space-y-4">
-                <button
-                  onClick={() => goToMenu("delivery")}
-                  className="group flex w-full items-center justify-between rounded-md bg-yellow-500 px-5 py-3 font-semibold text-white transition-colors hover:bg-yellow-600"
-                >
-                  <span>ORDER FOR DELIVERY</span>
-                  <svg
-                    className="h-5 w-5 transition-transform duration-200 group-hover:translate-x-1"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2.5"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <path d="M5 12h14" />
-                    <path d="M13 5l7 7-7 7" />
-                  </svg>
-                </button>
-
-                <button
-                  onClick={() => goToMenu("pickup")}
-                  className="group flex w-full items-center justify-between rounded-md bg-yellow-500 px-5 py-3 font-semibold text-white transition-colors hover:bg-yellow-600"
-                >
-                  <span>CLICK & COLLECT</span>
-                  <svg
-                    className="h-5 w-5 transition-transform duration-200 group-hover:translate-x-1"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2.5"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <path d="M5 12h14" />
-                    <path d="M13 5l7 7-7 7" />
-                  </svg>
-                </button>
-
-                <button
-                  onClick={() => goToMenu()}
-                  className="group flex w-full items-center justify-between rounded-md bg-yellow-500 px-5 py-3 font-semibold text-white transition-colors hover:bg-yellow-600"
-                >
-                  <span>BROWSE MENU</span>
-                  <svg
-                    className="h-5 w-5 transition-transform duration-200 group-hover:translate-x-1"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2.5"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <path d="M5 12h14" />
-                    <path d="M13 5l7 7-7 7" />
-                  </svg>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
-    </>
+    </div>
   );
 };
 

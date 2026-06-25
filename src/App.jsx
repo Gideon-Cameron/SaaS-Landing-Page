@@ -1,10 +1,12 @@
-// import Hero from "./Components/Hero";
-import Landing from "./Components/Landing"
+import Hero from "./Components/Hero";
+// import Landing from "./Components/Landing"
+import "@fontsource/inter";
+import "./index.css";
 
 function App() {
   return (
     <main>
-      <Landing />
+      <Hero />
     </main>
   );
 }

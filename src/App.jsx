@@ -2,6 +2,7 @@ import Navbar from "./Components/Navbar";
 import Hero from "./Components/Hero";
 // import Features from "./Components/Features"
 import Dashboard from "./Components/Dashboard";
+import Pricing from "./Components/Pricing";
 
 const App = () => {
   return (
@@ -24,7 +25,7 @@ const App = () => {
          className=""
          />
 
-        <section
+        <Pricing
           id="pricing"
           className="min-h-screen"
         />

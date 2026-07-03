@@ -22,7 +22,9 @@ const Navbar = () => {
 
       <div className="mx-auto max-w-7xl px-6 pt-5">
 
-        <div className="flex h-16 items-center justify-between rounded-2xl border border-white/60 bg-white/75 px-6 backdrop-blur-xl shadow-[0_8px_35px_rgba(15,23,42,0.08)]">
+        {/* Glass Navbar */}
+
+        <div className="flex h-16 items-center justify-between rounded-2xl border border-white/30 bg-white/45 px-6 backdrop-blur-2xl shadow-[0_10px_40px_rgba(15,23,42,0.06)] transition-all duration-300">
 
           {/* Logo */}
 
@@ -41,7 +43,7 @@ const Navbar = () => {
             </span>
           </a>
 
-          {/* Desktop */}
+          {/* Desktop Navigation */}
 
           <nav className="hidden items-center gap-10 lg:flex">
 
@@ -49,7 +51,7 @@ const Navbar = () => {
               <a
                 key={item.name}
                 href={item.href}
-                className="text-[15px] font-medium text-slate-700 transition hover:text-blue-600"
+                className="text-[15px] font-medium text-slate-700 transition duration-200 hover:text-blue-600"
               >
                 {item.name}
               </a>
@@ -57,17 +59,17 @@ const Navbar = () => {
 
           </nav>
 
-          {/* Right Side */}
+          {/* Desktop Buttons */}
 
           <div className="hidden items-center gap-4 lg:flex">
 
-            <button className="rounded-xl px-4 py-2 text-[15px] font-medium text-slate-700 transition hover:bg-slate-100">
+            <button className="rounded-xl px-4 py-2 text-[15px] font-medium text-slate-700 transition hover:bg-white/30">
 
               Sign In
 
             </button>
 
-            <button className="group flex items-center gap-2 rounded-xl bg-gradient-to-r from-blue-600 to-violet-600 px-6 py-3 text-[15px] font-semibold text-white shadow-lg shadow-blue-300/30 transition-all duration-300 hover:scale-[1.02]">
+            <button className="group flex items-center gap-2 rounded-xl bg-gradient-to-r from-blue-600 to-violet-600 px-6 py-3 text-[15px] font-semibold text-white shadow-lg shadow-blue-500/25 transition-all duration-300 hover:scale-[1.02] hover:shadow-blue-500/40">
 
               Get Started
 
@@ -80,10 +82,10 @@ const Navbar = () => {
 
           </div>
 
-          {/* Mobile */}
+          {/* Mobile Button */}
 
           <button
-            className="rounded-lg p-2 lg:hidden"
+            className="rounded-lg p-2 transition hover:bg-white/20 lg:hidden"
             onClick={() => setMobileOpen(!mobileOpen)}
           >
             {mobileOpen ? <X size={24} /> : <Menu size={24} />}
@@ -101,7 +103,7 @@ const Navbar = () => {
           }`}
         >
 
-          <div className="rounded-2xl border border-slate-200 bg-white/95 backdrop-blur-xl shadow-xl">
+          <div className="rounded-2xl border border-white/30 bg-white/45 backdrop-blur-2xl shadow-[0_10px_40px_rgba(15,23,42,0.08)]">
 
             <nav className="flex flex-col">
 
@@ -110,7 +112,7 @@ const Navbar = () => {
                   key={item.name}
                   href={item.href}
                   onClick={() => setMobileOpen(false)}
-                  className="border-b border-slate-100 px-6 py-4 text-slate-700 hover:bg-slate-50"
+                  className="border-b border-white/20 px-6 py-4 text-slate-700 transition hover:bg-white/20"
                 >
                   {item.name}
                 </a>
@@ -120,13 +122,13 @@ const Navbar = () => {
 
             <div className="space-y-3 p-5">
 
-              <button className="w-full rounded-xl border border-slate-200 py-3 font-medium text-slate-700 hover:bg-slate-50">
+              <button className="w-full rounded-xl border border-white/30 bg-white/20 py-3 font-medium text-slate-700 transition hover:bg-white/30">
 
                 Sign In
 
               </button>
 
-              <button className="w-full rounded-xl bg-gradient-to-r from-blue-600 to-violet-600 py-3 font-semibold text-white">
+              <button className="w-full rounded-xl bg-gradient-to-r from-blue-600 to-violet-600 py-3 font-semibold text-white shadow-lg shadow-blue-500/20 transition hover:shadow-blue-500/40">
 
                 Get Started
 

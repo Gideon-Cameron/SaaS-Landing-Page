@@ -2,7 +2,7 @@ import {
     Sparkles,
     Rocket,
     Calendar,
-    CheckCircle2,
+    // CheckCircle2,
   } from "lucide-react";
   
   import desktopBackground from "../assets/Desktop-background.png";
@@ -99,7 +99,7 @@ import {
               </div>
   
               {/* Benefits */}
-  
+{/*   
               <div className="mt-8 flex flex-wrap gap-x-8 gap-y-3">
   
                 <div className="flex items-center gap-2">
@@ -141,7 +141,7 @@ import {
   
                 </div>
   
-              </div>
+              </div> */}
   
             </div>
   

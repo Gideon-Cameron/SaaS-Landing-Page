@@ -1,5 +1,7 @@
 import Navbar from "./Components/Navbar";
 import Hero from "./Components/Hero";
+// import Features from "./Components/Features"
+import Dashboard from "./Components/Dashboard";
 
 const App = () => {
   return (
@@ -8,13 +10,19 @@ const App = () => {
 
       <main>
         <Hero />
+        
 
         {/* Placeholder Sections */}
 
-        <section
+        {/* <Features
           id="features"
           className="min-h-screen"
-        />
+        /> */}
+
+        <Dashboard
+         id="dashboard"
+         className=""
+         />
 
         <section
           id="pricing"

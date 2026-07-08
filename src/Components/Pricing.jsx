@@ -92,7 +92,7 @@ import {
             </h2>
   
             <p className="mt-4 text-base text-slate-500 md:text-lg">
-              Transparent pricing. No hidden fees. Cancel anytime.
+              Check out advanced features with PREMIUM!
             </p>
   
           </div>

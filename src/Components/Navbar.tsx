@@ -24,7 +24,7 @@ const Navbar = () => {
 
         {/* Glass Navbar */}
 
-        <div className="flex h-16 items-center justify-between rounded-2xl border border-white/30 bg-white/45 px-6 backdrop-blur-2xl shadow-[0_10px_40px_rgba(15,23,42,0.06)] transition-all duration-300">
+        <div className="flex h-[72px] items-center justify-between rounded-2xl border border-white/30 bg-white/45 px-6 backdrop-blur-2xl shadow-[0_10px_40px_rgba(15,23,42,0.06)] transition-all duration-300">
 
           {/* Logo */}
 
@@ -32,15 +32,20 @@ const Navbar = () => {
             href="/"
             className="flex items-center gap-3"
           >
-            <img
-              src={logo}
-              alt="FlowPilot"
-              className="h-10 w-10 rounded-xl object-cover"
-            />
+            <div className="flex h-11 w-11 items-center justify-center rounded-xl p-0.5">
+
+              <img
+                src={logo}
+                alt="FlowPilot"
+                className="h-full w-full object-contain"
+              />
+
+            </div>
 
             <span className="text-2xl font-bold tracking-tight text-slate-900">
               FlowPilot
             </span>
+
           </a>
 
           {/* Desktop Navigation */}

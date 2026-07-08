@@ -63,14 +63,13 @@ import {
             <h2 className="text-4xl font-black tracking-tight text-slate-900 md:text-6xl">
               Everything Your Team Needs.
               <span className="mt-2 block bg-gradient-to-r from-blue-600 via-indigo-500 to-violet-600 bg-clip-text text-transparent">
-                Nothing It Doesnt.
+              To Stay in Sync
               </span>
             </h2>
   
             <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-slate-600">
               FlowPilot keeps projects organized automatically so your team
-              always knows what to work on next. No clutter. No unnecessary
-              complexity.
+              always knows what to work on next.
             </p>
           </div>
   

@@ -70,7 +70,7 @@ import {
               />
   
               <span className="text-sm font-semibold text-slate-800">
-                Simple. Fair. Built for teams.
+                Simple, Fair, & Built for teams.
               </span>
   
             </div>

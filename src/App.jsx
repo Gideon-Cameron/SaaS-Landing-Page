@@ -3,6 +3,7 @@ import Hero from "./Components/Hero";
 // import Features from "./Components/Features"
 import Dashboard from "./Components/Dashboard";
 import Pricing from "./Components/Pricing";
+import Contact from "./Components/Contact";
 
 const App = () => {
   return (
@@ -30,17 +31,12 @@ const App = () => {
           className="min-h-screen"
         />
 
-        <section
-          id="testimonials"
+        <Contact
+          id="contact"
           className="min-h-screen"
         />
 
-        <section
-          id="faq"
-          className="min-h-screen"
-        />
-
-        <footer />
+        
       </main>
     </div>
   );

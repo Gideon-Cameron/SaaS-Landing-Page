@@ -18,13 +18,13 @@ const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50">
+    <header className="fixed inset-x-0 top-0 z-[100] py-3">
 
-      <div className="mx-auto max-w-7xl px-6 pt-5">
+      <div className="mx-auto max-w-7xl px-6">
 
         {/* Glass Navbar */}
 
-        <div className="flex h-[72px] items-center justify-between rounded-2xl border border-white/30 bg-white/45 px-6 backdrop-blur-2xl shadow-[0_10px_40px_rgba(15,23,42,0.06)] transition-all duration-300">
+        <div className="flex h-[72px] items-center justify-between rounded-2xl border border-white/40 bg-white/60 px-6 backdrop-blur-2xl shadow-[0_10px_40px_rgba(15,23,42,0.08)] transition-all duration-300">
 
           {/* Logo */}
 
@@ -69,9 +69,7 @@ const Navbar = () => {
           <div className="hidden items-center gap-4 lg:flex">
 
             <button className="rounded-xl px-4 py-2 text-[15px] font-medium text-slate-700 transition hover:bg-white/30">
-
               Sign In
-
             </button>
 
             <button className="group flex items-center gap-2 rounded-xl bg-gradient-to-r from-blue-600 to-violet-600 px-6 py-3 text-[15px] font-semibold text-white shadow-lg shadow-blue-500/25 transition-all duration-300 hover:scale-[1.02] hover:shadow-blue-500/40">
@@ -108,7 +106,7 @@ const Navbar = () => {
           }`}
         >
 
-          <div className="rounded-2xl border border-white/30 bg-white/45 backdrop-blur-2xl shadow-[0_10px_40px_rgba(15,23,42,0.08)]">
+          <div className="rounded-2xl border border-white/40 bg-white/60 backdrop-blur-2xl shadow-[0_10px_40px_rgba(15,23,42,0.08)]">
 
             <nav className="flex flex-col">
 
@@ -128,15 +126,11 @@ const Navbar = () => {
             <div className="space-y-3 p-5">
 
               <button className="w-full rounded-xl border border-white/30 bg-white/20 py-3 font-medium text-slate-700 transition hover:bg-white/30">
-
                 Sign In
-
               </button>
 
               <button className="w-full rounded-xl bg-gradient-to-r from-blue-600 to-violet-600 py-3 font-semibold text-white shadow-lg shadow-blue-500/20 transition hover:shadow-blue-500/40">
-
                 Get Started
-
               </button>
 
             </div>
